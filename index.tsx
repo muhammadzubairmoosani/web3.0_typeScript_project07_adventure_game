@@ -3,7 +3,7 @@ import inquirer from "inquirer";
 console.log("Welcome to the adventure game!");
 
 const game = {
-  start: () => {
+  start: (): void => {
     inquirer
       .prompt([
         {
@@ -13,7 +13,7 @@ const game = {
           choices: ["Left", "Right"],
         },
       ])
-      .then((answers) => {
+      .then((answers: { choice: string }) => {
         if (answers.choice === "Left") {
           game.left();
         } else {
@@ -21,7 +21,7 @@ const game = {
         }
       });
   },
-  left: () => {
+  left: (): void => {
     inquirer
       .prompt([
         {
@@ -31,7 +31,7 @@ const game = {
             "You come across a bear. Do you run away or try to fight it?",
         },
       ])
-      .then((answers) => {
+      .then((answers: { choice: boolean }) => {
         if (answers.choice) {
           console.log("You successfully run away from the bear!");
         } else {
@@ -40,7 +40,7 @@ const game = {
         game.end();
       });
   },
-  right: () => {
+  right: (): void => {
     inquirer
       .prompt([
         {
@@ -51,7 +51,7 @@ const game = {
           choices: ["Swim", "Follow"],
         },
       ])
-      .then((answers) => {
+      .then((answers: { choice: string }) => {
         if (answers.choice === "Swim") {
           console.log("You successfully swim across the river!");
         } else {
@@ -60,7 +60,7 @@ const game = {
         game.end();
       });
   },
-  end: () => {
+  end: (): void => {
     console.log("The game is over.");
   },
 };
