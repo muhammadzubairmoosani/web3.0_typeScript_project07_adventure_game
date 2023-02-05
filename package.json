@@ -1,6 +1,6 @@
 {
   "name": "inpuirer_adventure_game_07_zm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -11,6 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/muhammadzubairmoosani/web3.0_typeScript_project07_adventure_game.git"
   },
+  "bin": "./index.js",
   "keywords": [
     "typescript", "adventure game", "inquirer", "text game", "interactive game", "command line game", "terminal game", "node.js", "cli", "gaming"
   ],
